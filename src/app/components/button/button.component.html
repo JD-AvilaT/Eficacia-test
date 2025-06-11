@@ -1,0 +1,31 @@
+<button 
+  [class]="getStyles(
+    size,
+    color,
+    state,
+    orientation,
+    iconStart,
+    iconEnd,
+    showIconEnd,
+    showIconStart,
+    styles,
+    width)" 
+  [style]="getButtonStyles()"
+  (click)="onClick.emit($event)">
+
+  <div class="content">
+    @if (showIconStart && iconStart) {
+      <span class="icon-left">
+        <app-icon [name]="iconStart" fill="currentColor"></app-icon>
+      </span>
+    }
+  
+    {{ label }}
+  </div>
+
+  @if (showIconEnd && iconEnd) {
+    <span class="icon-right">
+      <app-icon [name]="iconEnd" fill="currentColor"></app-icon>
+    </span>
+  }
+</button>

@@ -1,0 +1,8 @@
+<div class="whiteboard-container">
+      <!-- Itera sobre el array de cards y crea una tarjeta para cada una -->
+      <app-detail-card-comp 
+        *ngFor="let card of cards"
+        [iconType]="card.iconType"
+        [title]="card.title">
+      </app-detail-card-comp>
+  </div>

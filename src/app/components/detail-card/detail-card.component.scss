@@ -1,0 +1,18 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+
+.whiteboard-container {
+    width: 302px;
+    height: 348px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 16px 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+    /* O también puedes usar: */
+    /* justify-content: space-evenly; */ /* Distribuye el espacio uniformemente */
+}

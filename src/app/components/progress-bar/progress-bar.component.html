@@ -1,0 +1,11 @@
+<div class="progress-container">
+  <div class="progress-track">
+    <div class="progress-fill" [ngClass]="status" [style.width]="progressWidth"></div>
+    
+    @if (showPercent) {
+      <div class="progress-badge" [ngClass]="status" [style.left]="badgePosition">
+        {{ value }}%
+      </div>
+    }
+  </div>
+</div>

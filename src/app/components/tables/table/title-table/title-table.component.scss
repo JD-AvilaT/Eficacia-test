@@ -1,0 +1,44 @@
+@use "../../../../../styles/colors" as colors;
+@use '../../../../../styles/spacings' as spacings;
+@use '../../../../../styles/typography' as typography;
+
+.header {
+    margin: 0;
+    width:100%;
+    font-size: typography.$text-h4-size;
+    font-weight: typography.$text-h4-weight;
+    word-wrap: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+
+.container {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+    padding: spacings.$padding-sm spacings.$padding-lg;
+
+    &.filled {
+        background-color: colors.$primary-blue;
+        border-top-left-radius: spacings.$radius-sm; 
+        border-top-right-radius: spacings.$radius-sm; 
+
+        .header {
+            color: colors.$sh-white;
+        }
+    }
+
+    &.text {
+        background-color: transparent;
+
+        .header {
+            color: colors.$primary-blue;
+        }
+    }
+}
+
+    

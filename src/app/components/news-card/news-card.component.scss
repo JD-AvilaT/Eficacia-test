@@ -1,0 +1,48 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+.news-card{
+  display: flex;
+  flex-direction: row;
+  gap: spacings.$spacing-md;
+  padding: spacings.$padding-lg  spacings.$padding-lg;
+  background-color: colors.$sh-white;;
+}
+
+.info{
+  display: flex;
+  flex-direction: column;
+  gap: spacings.$spacing-sm;
+  margin: 0;
+  padding: 0;
+}
+
+
+.headers{
+  display: flex;
+  flex-direction: column;
+  gap: spacings.$spacing-xs;
+  margin: 0;
+  padding: 0;
+}
+
+.title{
+  color: colors.$primary-blue;
+  margin: 0;
+  font-size: typography.$text-subtitle-size;
+  font-weight: typography.$text-subtitle-weight;
+
+}
+
+.body{
+  color: colors.$ns-gray;
+  margin: 0;
+  font-size: typography.$text-body-sm-size;
+}
+
+.caption{
+  color: colors.$sh-gray;
+  margin: 0;
+  font-size: typography.$text-caption-size;
+}

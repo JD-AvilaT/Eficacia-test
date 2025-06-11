@@ -1,0 +1,24 @@
+
+<div class="avatar-image-wrapper">
+  @if (content === 'image') {
+    <img 
+      [src]="image" 
+      alt="profile image"
+      [class]="['avatar-image', size]" 
+    />
+  } @else {
+    <div [class]="['avatar-text', size]">
+      {{ avatarText }}
+    </div>
+  }
+  
+  @if (showBadge) {
+    <app-icon
+      name="oro" 
+      [size]="sizeIcon"
+      alt="oro category icon" 
+      class="avatar-badge"
+    />
+  }
+  
+</div>

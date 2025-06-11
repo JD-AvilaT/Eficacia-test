@@ -1,0 +1,124 @@
+@use '../../../../styles/spacings' as spacings;
+@use '../../../../styles/colors' as colors;
+@use '../../../../styles/typography' as typography;
+@use '../../../../styles/shadow' as shadow;
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  padding: spacings.$padding-xxl spacings.$padding-xl;
+  margin: 0;
+  min-width: 250px;
+  width: 100%;
+  max-width: 100%;
+  border-radius: spacings.$radius-sm;
+  gap: spacings.$spacing-md;
+  box-shadow: shadow.$drop-shadow;
+
+  &.primary {
+    background-color: colors.$sh-white;
+
+    .header-text, 
+    .section-title {
+      color: colors.$primary-blue !important;
+    }
+
+    .section-subtitle,
+    .section-body {
+      color: colors.$sh-gray;
+    }
+
+  }
+
+  &.secondary {
+    background-color: colors.$primary-blue;
+    
+    .header-text,
+    .section-title,
+    .section-subtitle,
+    .section-body{
+      color: colors.$sh-white !important;
+    }
+
+  }
+}
+
+.dropdown-header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.headers {
+  flex: 1; 
+  min-width: 0;
+}
+
+.header-text, .section-title, .section-subtitle, .section-body {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+
+.header-text{
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal; 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+}
+
+.title-content{
+  display: flex;
+  flex-direction: row;
+  gap: spacings.$spacing-sm;
+}
+
+.header-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: spacings.$spacing-xs;
+}
+
+
+.dropdown-section {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-title {
+  font-size: typography.$text-subtitle-size;
+  font-weight: typography.$text-subtitle-weight;
+  margin: 0;
+}
+
+.section-subtitle {
+  font-size: typography.$text-caption-size;
+  font-weight: typography.$text-caption-weight;
+  margin: 0;
+
+}
+
+.section-body {
+  font-size: typography.$text-body-size;
+  font-weight: typography.$text-body-weight;
+  margin: 0;
+
+}

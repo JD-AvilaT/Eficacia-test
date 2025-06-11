@@ -1,0 +1,22 @@
+<form class="form" #formElement>
+    <label for="search">
+        <input 
+        required="" 
+        autocomplete="off" 
+        class="search" 
+        type="text"
+        #searchInput
+        [placeholder]="placeholder"
+        [disabled]="disabled"
+        [value]="value"
+        (input)="onSearchChange($event)">
+
+        <button type="reset" class="clear-button" (click)="clearSearch()">
+            <app-icon name="x" fill="currentColor"></app-icon>
+        </button>
+        
+        <div class="icon">     
+            <app-icon name="search" fill="currentColor"></app-icon>            
+        </div>
+    </label>
+</form>

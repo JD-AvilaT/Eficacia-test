@@ -1,0 +1,22 @@
+<div class="comp-container">
+
+  <div class="tooltip-wrapper" *ngIf="isTooltipVisible">
+    <div class="tooltip-container">
+      <p>¿Cómo podemos ayudarte?</p>
+      <app-icon 
+        [name]="'triangle'" 
+        size="12"
+        class="triangle"
+      >
+      </app-icon>
+    </div>
+  </div>
+
+  <span class="icon" (click)="toggleTooltip($event)">
+    <app-icon 
+      [name]="'question'" 
+      size="64"
+    >
+    </app-icon>
+  </span>
+</div>

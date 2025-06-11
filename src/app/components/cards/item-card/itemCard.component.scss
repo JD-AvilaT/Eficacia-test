@@ -1,0 +1,42 @@
+@use "../../../../styles/colors" as colors;
+@use '../../../../styles/spacings' as spacings;
+@use '../../../../styles/typography' as typography;
+@use '../../../../styles/radius' as radius;
+@use '../../../../styles/shadow' as shadow;
+
+.item-card {
+    width: 325px;
+    height: 322px;
+    background-color: colors.$primary-white-bg;
+    border-radius: 8px;
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: spacings.$spacing-sm;
+    align-items: center;
+    text-align: center;
+  
+    .svg-icon {
+      width: 81px;
+      height: 81px;
+    }
+
+    .text-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: spacings.$spacing-none;
+    }
+  
+    .description {
+      font-size: typography.$text-body-size;
+      font-weight: typography.$text-body-weight;
+      color: colors.$color-texts-body;
+    }
+  
+    .subtitle {
+      font-size: typography.$text-body-size;
+      color: colors.$primary-blue;
+      font-weight: typography.$text-body-weight;
+    }
+  }

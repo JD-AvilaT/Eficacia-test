@@ -1,0 +1,95 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  padding: spacings.$padding-lg;
+  margin: 0;
+  width: 342px;
+  background-color: colors.$sh-white;
+  gap: spacings.$spacing-sm;
+  
+}
+
+.dropdown-header {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  gap: spacings.$spacing-md;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.divider-line{
+  border: 0;
+  height: 1px;            
+  background-color: colors.$sh-gray;  
+  margin: 0; 
+}
+
+.header-text{
+  color: colors.$primary-blue !important;
+}
+
+.headers{
+  display: flex;
+  flex-direction: column;
+  gap: spacings.$spacing-xs;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: column;
+  gap: spacings.$spacing-xs;
+}
+
+.state-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.dropdown-section {
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.section-title {
+  font-size: typography.$text-subtitle-size;
+  font-weight: typography.$text-subtitle-weight;
+  color: colors.$ns-gray;
+  margin: 0;
+}
+
+.section-subtitle {
+  font-size: typography.$text-caption-size;
+  font-weight: typography.$text-caption-weight;
+  color: colors.$sh-gray;
+  margin: 0;
+
+}
+
+.section-body {
+  font-size: typography.$text-body-size;
+  font-weight: typography.$text-body-weight;
+  color: colors.$sh-gray;
+  margin: 0;
+
+}
+
+.section-state {
+  font-size: typography.$text-btn-size;
+  font-weight: typography.$text-btn-weight;
+  color: colors.$sh-green;
+  margin: 0;
+
+}
+

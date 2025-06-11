@@ -1,0 +1,64 @@
+@use "../../../styles/colors" as colors;
+@use "../../../styles/typography" as typography;
+@use "../../../styles/radius" as radius;
+@use "../../../styles/spacings" as spacings;
+@use "../../../styles/shadow" as shadows;
+
+.footer {
+    width: 100%;
+    padding: spacings.$padding-lg spacings.$padding-xxl;
+    background-color: colors.$primary-white-bg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: typography.$text-body-sm-size;
+    color: colors.$primary-blue;
+    row-gap: spacings.$spacing-sm;
+  
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: spacings.$spacing-sm;
+      text-align: center;
+    }
+  
+    &__text {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: spacings.$spacing-sm;
+  
+      a {
+        text-decoration: none;
+        color: colors.$primary-blue;
+      }
+  
+/*       .separator {
+        margin: 0 6px;
+        color: #ccc;
+      } */
+  
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+      }
+    }
+  
+    &__icons {
+      display: flex;
+      gap: spacings.$padding-md;
+  
+      img {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+      }
+  
+      @media (max-width: 768px) {
+        align-self: flex-end;
+      }
+    }
+  }
+  

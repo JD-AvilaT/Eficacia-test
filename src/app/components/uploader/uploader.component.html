@@ -1,0 +1,38 @@
+<div class="uploader-container">
+  <ng-container *ngIf="!hasLink; else linkState">
+    <div class="overlay">
+      <p>{{ title }}</p>
+      <div class="link-input-container">
+        <input #linkInput
+               class="link-input"
+               type="text"
+               [(ngModel)]="linkValue"
+               (paste)="onLinkPaste($event)"
+               (input)="onLinkInput($event)"
+               [placeholder]="hint">
+        <div class="icon-button" (click)="submitLink()">
+          <app-icon name="upload" fill="currentColor"></app-icon>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+
+  <ng-template #linkState>
+    <div class="overlay">
+      <p>{{ title2 }}</p>
+
+      <div class="content">
+      <div class="link-input-container">
+        <div class="link-info">
+          {{ linkValue }}
+        </div>
+        <app-icon name="file" size="24px" fill="currentColor"></app-icon>
+      </div>
+        <div class="icon-button" (click)="removeLink()">
+          <app-icon name="close" fill="currentColor"></app-icon>
+        </div>
+      </div>
+      
+    </div>
+  </ng-template>
+</div>

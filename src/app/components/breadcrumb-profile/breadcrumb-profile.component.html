@@ -1,0 +1,26 @@
+<div class="breadcrumb-profile">
+    <app-icon
+      *ngIf="showIconArrow"
+      name="arrowLeft"
+      fill="currentColor"
+      class="arrow-icon"
+    ></app-icon>
+
+  <div class="breadcrumb-header">
+    <h2 class="breadcrumb-title">{{ title }}</h2>
+    <nav class="breadcrumb-nav">
+        <ng-container *ngFor="let item of items; let i = index">
+        <span
+            class="breadcrumb-item"
+            [class.last]="i === items.length - 1"
+            >{{ item }}</span
+        >
+        <span
+            *ngIf="i < items.length - 1"
+            class="breadcrumb-separator"
+            >&gt;</span
+        >
+        </ng-container>
+    </nav>
+  </div>
+</div>

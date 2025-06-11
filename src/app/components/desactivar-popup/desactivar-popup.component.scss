@@ -1,0 +1,50 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+.desactivar-button {
+  padding: spacings.$padding-xs spacings.$padding-md;
+  border-radius: spacings.$radius-sm;
+  background-color: colors.$sh-white;
+  color: #000;
+  font-size: typography.$text-subtitle-size;
+  font-weight: typography.$text-body-weight;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  position: relative;
+  
+  // Sombreado estándar usando box-shadow
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover:not(.disabled) {
+    background-color: darken(colors.$sh-white, 5%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+  }
+
+  &:active:not(.disabled) {
+    transform: translateY(1px);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  &.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+  }
+
+  // Versión alternativa con sombra inferior más pronunciada
+  &--strong-shadow {
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1);
+    
+    &:hover:not(.disabled) {
+      box-shadow: 0 6px 0 rgba(0, 0, 0, 0.15);
+    }
+    
+    &:active:not(.disabled) {
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+}

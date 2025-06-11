@@ -1,0 +1,25 @@
+@use '../../../../styles/typography' as typo;
+@use '../../../../styles/colors' as colors;
+
+.status-button {
+    width: 24px;
+    height: 24px;
+    background-color: colors.$blue-scale-500;
+    border: none;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: colors.$blue-scale-500;
+    }
+  
+    .icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+  

@@ -1,0 +1,54 @@
+/* src/app/components/breadcrumb-profile/breadcrumb-profile.component.scss */
+@use '../../../styles/colors' as colors;
+@use '../../../styles/typography' as typography;
+@use '../../../styles/spacings' as spacings;
+
+.breadcrumb-profile {
+  display: flex;
+  flex-direction: row;
+  gap: spacings.$spacing-sm;
+  align-items: center;
+}
+
+.arrow-icon {
+    color: colors.$primary-blue;
+    font-size: 24px; 
+}
+
+.breadcrumb-header {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: spacings.$spacing-xs;
+
+  .breadcrumb-title {
+    margin: 0;
+    font-size: typography.$text-body-size;
+    font-weight: typography.$text-subtitle-weight;
+    color: colors.$color-text-titles;
+  }
+}
+
+.breadcrumb-nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.breadcrumb-item {
+  font-size: typography.$text-caption-size;
+  font-weight: typography.$text-caption-weight;
+  color: colors.$ns-gray; 
+
+  &.last {
+
+    color: colors.$sh-green;
+    font-weight: typography.$text-caption-weight;
+  }
+}
+
+.breadcrumb-separator {
+  color: colors.$ns-gray;
+  margin: 0 0.25rem;
+}

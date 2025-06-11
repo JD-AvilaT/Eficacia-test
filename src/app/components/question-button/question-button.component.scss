@@ -1,0 +1,49 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+@use '../../../styles/shadow' as shadow;
+
+.comp-container {
+  position: relative; 
+  display: inline-flex; 
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 0;
+  gap: spacings.$spacing-sm; 
+}
+
+.tooltip-wrapper {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1000; 
+  color: colors.$ns-gray;
+}
+
+.tooltip-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+p {
+  margin: 0;
+  font-size: typography.$text-body-size;
+  font-weight: typography.$text-body-weight;
+  background-color: colors.$sh-white;
+  box-shadow: shadow.$drop-shadow;
+  padding: spacings.$spacing-sm spacings.$spacing-md;
+  border-radius: spacings.$radius-sm;
+  white-space: nowrap;
+}
+
+.triangle {
+  position: relative;
+  right: 20px;
+  bottom: 6px;
+}
+
+.icon {
+  display: inline-flex;
+  margin: 0;
+}

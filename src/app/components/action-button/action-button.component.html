@@ -1,0 +1,13 @@
+<button 
+  [class]="getStyles(apperance)" 
+  (click)="onClick.emit($event)">
+
+  <app-icon 
+    [name]="'arrowLeft'" 
+    [fill]="'#0041A3'">
+  </app-icon>
+  
+  {{ children }}
+  
+  
+</button>

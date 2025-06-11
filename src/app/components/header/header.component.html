@@ -1,0 +1,10 @@
+<div class="header">
+    <app-breadcrumb-profile />
+    <ng-container *ngIf="variant === 'profile'; else avatarVersion">
+      <storybook-profile-header />
+    </ng-container>
+    <ng-template #avatarVersion>
+      <app-profile />
+    </ng-template>
+  </div>
+  

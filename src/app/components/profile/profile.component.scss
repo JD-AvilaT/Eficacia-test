@@ -1,0 +1,38 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+$avatar-size: 84px; 
+
+.avatar-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: fit-content;
+  gap: spacings.$spacing-md;
+
+
+  .avatar-name {
+    font-weight: typography.$text-subtitle-weight; 
+    font-size:  typography.$text-subtitle-size;
+    color: colors.$primary-blue;
+    margin: 0;
+  }
+
+  .info{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+    gap: spacings.$spacing-xs;
+    margin: 0;
+  }
+
+  .avatar-description{
+    font-weight: typography.$text-body-weight; 
+    font-size:  typography.$text-body-size;
+    color: colors.$primary-blue;
+    margin: 0;
+  }
+  
+}

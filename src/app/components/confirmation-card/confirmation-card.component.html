@@ -1,0 +1,45 @@
+<div class="confirmation-card">
+    <div class="cc-info">
+        <h3 class="cc-title">{{ titleText }}</h3>
+        <p class="cc-description">{{ descriptionText }}</p>
+    </div>
+
+  <div *ngIf="showDoubleButton" class="cc-double-buttons">
+    <app-button
+      label="button"
+      size="medium"
+      color="primary"
+      styles="filled"
+      state="active"
+      orientation="center"
+    ></app-button>
+    <app-button
+      label="button"
+      size="medium"
+      color="error"
+      styles="filled"
+      state="active"
+      orientation="center"
+    ></app-button>
+  </div>
+
+  <div *ngIf="showSingleButton" class="cc-single-button">
+    <app-button
+      label="button"
+      size="medium"
+      color="primary"
+      styles="filled"
+      state="active"
+      orientation="center"
+    ></app-button>
+  </div>
+
+  <app-button
+    label="{{ linkText }}"
+    styles="text"
+    state="active"
+    color="error"
+    size="small"
+    orientation="center"
+  ></app-button>
+</div>

@@ -1,0 +1,20 @@
+<div [class]="['avatar-group', spacing]">
+  @for (avatar of displayedAvatars; track $index) {
+    <app-avatar
+      [size]="size"
+      [content]="avatar.content"
+      [image]="avatar.content === 'image' ? avatar.image : ''"
+      [avatarText]="avatar.content === 'text' ? avatar.avatarText : ''"
+      class="avatar-item"
+    ></app-avatar>
+  }
+  
+  @if (remainingCount > 0) {
+    <app-avatar
+      [size]="size"
+      content="text"
+      [avatarText]="'+' + remainingCount"
+      class="avatar-item remaining-count"
+    ></app-avatar>
+  }
+</div>

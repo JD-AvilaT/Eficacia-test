@@ -1,0 +1,93 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+.info-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 8px 12px;
+    width: 347px;
+    height: 124px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+  
+    .card-content {
+      display: flex;
+
+
+      .card-content2 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+      }
+
+      .title{
+       margin: 0;
+       display: flex;
+       font-size: typography.$text-subtitle-size; 
+       color: colors.$color-text-titles;
+       font-weight: typography.$text-subtitle-weight;
+      }
+
+      .text{
+        font-size: typography.$text-body-size; 
+        color: colors.$color-texts-body;
+        font-weight: typography.$text-body-weight;
+        margin: 0;
+        display: flex;
+        height: 34px;
+        word-wrap: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .button-container{
+        display: flex;
+        margin: 0px;
+      }
+
+      .alternate-state {
+        display: flex;
+        gap: 12px;
+
+        .subtitle {
+          margin: 0;
+          margin-top: 4px;
+          margin-bottom: 16px;
+          font-size: 10px; 
+          color: colors.$color-texts-body;
+          font-weight: typography.$text-overline-weight;
+        }
+
+
+        .card-image {
+          width: 97px;
+          height: 108px;
+          border-radius: 4px;
+        }
+
+        .text2{
+          font-size: typography.$text-body-size; 
+          color: colors.$color-texts-body;
+          font-weight: typography.$text-body-weight;
+          margin: 0;
+          display: flex;
+          height: 51px;
+          word-wrap: break-word;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+    }
+
+    .default-state {
+      display: flex;
+      width: 323px;
+      height: 100%;
+      flex-direction: column;
+      gap: 4px;
+    }
+  }

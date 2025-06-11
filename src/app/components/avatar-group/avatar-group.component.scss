@@ -1,0 +1,27 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+.avatar-group {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+}
+
+.medium{
+  gap: spacings.$spacing-xs;
+}
+  
+.small{
+  gap: 0;
+
+  app-avatar{
+    margin-left: -8px;
+
+      @for $i from 1 through 10 {
+        &:nth-child(#{$i}) {
+          z-index: calc(10 - $i); 
+        }
+      }
+  }
+}

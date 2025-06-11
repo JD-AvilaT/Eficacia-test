@@ -1,0 +1,25 @@
+@use "../../../styles/colors" as colors;
+@use "../../../styles/typography" as typography;
+
+.form-alert {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 25px;
+  padding: 0 8px;
+  background-color: colors.$ps-yellow;
+  border-radius: 2px;
+  width: 100%;
+  max-width: 336px;
+  font-size: typography.$text-caption-size;
+  font-weight: typography.$text-caption-weight;
+  color: colors.$primary-blue;
+}
+
+.alert-message {
+  flex: 1;
+}
+
+.close-icon {
+  cursor: pointer;
+}

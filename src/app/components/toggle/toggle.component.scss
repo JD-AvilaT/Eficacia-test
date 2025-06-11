@@ -1,0 +1,57 @@
+@use "../../../styles/colors" as colors;
+
+:host {
+    display: inline-block;
+  }
+  
+  /* Contenedor del toggle */
+  .custom-toggle-wrapper {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    width: 40px; 
+    height: 24px;
+  }
+  
+  /* Toggle visual */
+  .custom-toggle {
+    width: 100%;
+    height: 100%;
+    background: colors.$ns-gray;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    transition: background 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  /* Toggle activado */
+  .custom-toggle.checked {
+    background: colors.$primary-blue;
+  }
+  
+  /* Botón deslizante */
+  .toggle-handle {
+    width: 20px;
+    height: 20px;
+    background: colors.$sh-gray;
+    border-radius: 50%;
+    position: absolute;
+    left: 2px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Movimiento del botón cuando está activado */
+  .custom-toggle.checked .toggle-handle {
+    transform: translateX(16px);
+    background: colors.$blue-scale-200;
+  }
+  
+  /* Ocultamos IonToggle */
+  .hidden-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  

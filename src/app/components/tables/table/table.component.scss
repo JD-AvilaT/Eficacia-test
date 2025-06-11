@@ -1,0 +1,31 @@
+@use "../../../../styles/colors" as colors;
+@use '../../../../styles/spacings' as spacings;
+@use '../../../../styles/typography' as typography;
+
+
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+  gap: 0;
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    gap: spacings.$spacing-sm;
+    align-items: center;
+    padding-left: spacings.$padding-lg;
+
+    
+}
+
+.text-footer{
+    color: colors.$primary-blue;
+    font-size: typography.$text-btn-size;
+    font-weight: typography.$text-btn-weight;
+}

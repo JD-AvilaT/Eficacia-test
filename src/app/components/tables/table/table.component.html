@@ -1,0 +1,25 @@
+<table class="table-container">
+    <thead>
+        <app-table-header 
+        [data]="data" 
+        [title]="title">
+        </app-table-header>
+    </thead>
+    <tbody>
+        <app-table-row 
+        *ngFor="let row of data" 
+        [rowData]="row"
+        ></app-table-row>
+    </tbody>
+    @if (showFooter){
+        <div class="footer">
+            <app-icon
+                name="addCircle" 
+                size="24"
+                fill="#0041A3"
+            />
+            <p class="text-footer">ADICIONAR ITEM</p>
+        </div>
+    }
+
+</table>

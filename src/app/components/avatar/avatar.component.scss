@@ -1,0 +1,84 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+@use '../../../styles/shadow' as shadow;
+
+$extra-large: 92px; 
+$large: 40px; 
+$medium: 32px; 
+$small: 24px; 
+$extra-small: 18px; 
+
+$badge-large: 34px;
+$badge-small: 12px;
+
+.avatar-image-wrapper {
+  position: relative;
+  width: fit-content;
+  height: fit-content;
+  
+}
+
+.avatar-image{
+  display:flex;
+  border-radius: 50%;
+  border: 1px solid white;
+  object-fit: cover;
+  box-sizing: border-box;
+  box-shadow: shadow.$drop-shadow;
+
+}
+
+.avatar-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #ccc; 
+  color: white;
+  font-weight: bold;
+  overflow: hidden;
+  box-shadow: shadow.$drop-shadow;
+  border: none;
+
+}
+
+.extra-large{
+  width: $extra-large;
+  height: $extra-large;
+  font-size: typography.$text-display-size;
+  
+}
+
+.large{
+  width: $large;
+  height: $large;
+  font-size: typography.$text-h4-size;
+}
+
+.medium{
+  width: $medium;
+  height: $medium;
+  font-size: typography.$text-subtitle-size;
+}
+
+.small{
+  width: $small;
+  height: $small;
+  font-size: typography.$text-overline-size;
+}
+
+.extra-small{
+  width: $extra-small;
+  height: $extra-small;
+  font-size: typography.$text-overline-size;
+}
+
+.avatar-badge{
+  display: flex;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+

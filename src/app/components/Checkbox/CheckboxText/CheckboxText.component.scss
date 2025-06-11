@@ -1,0 +1,15 @@
+@use "../../../../styles/colors" as colors;
+@use '../../../../styles/spacings' as spacings;
+@use '../../../../styles/typography' as typography;
+@use '../../../../styles/radius' as radius;
+@use '../../../../styles/shadow' as shadow;
+
+.checkbox-text {
+    display: flex;
+    align-items: center;
+    gap: spacings.$spacing-sm;
+    font-size: typography.$text-body-sm-size;
+    font-weight: typography.$text-body-sm-weight;
+    color: colors.$color-texts-body;
+  }
+  

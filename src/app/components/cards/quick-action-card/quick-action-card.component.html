@@ -1,0 +1,20 @@
+<div class="quick-card" [class.content]="type === 'content'" [class.void]="type === 'void'">
+
+    <div class="icon-top-right" (click)="onIconClick()">
+      <!-- SVG genérico -->
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+        <circle cx="12" cy="5" r="2"/>
+        <circle cx="12" cy="12" r="2"/>
+        <circle cx="12" cy="19" r="2"/>
+      </svg>
+    </div>
+  
+    <div class="icon-center">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M41.1325 25.1111H25.7041V39.8889C25.7041 41.043 24.7049 42 23.5 42C22.2951 42 21.2959 41.043 21.2959 39.8889V25.1111H5.86746C4.66257 25.1111 3.66339 24.1541 3.66339 23C3.66339 21.8459 4.66257 20.8889 5.86746 20.8889H21.2959V6.11111C21.2959 4.95704 22.2951 4 23.5 4C24.7049 4 25.7041 4.95704 25.7041 6.11111V20.8889H41.1325C42.3374 20.8889 43.3366 21.8459 43.3366 23C43.3366 24.1541 42.3374 25.1111 41.1325 25.1111Z" fill="#0041A3"/>
+        </svg>            
+    </div>
+  
+    <p class="caption">{{ caption }}</p>
+  </div>
+  

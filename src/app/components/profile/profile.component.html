@@ -1,0 +1,20 @@
+<div class="avatar-container">
+
+  <div class="info">
+    @if (showName) {
+      <h2 class="avatar-name">{{name}}</h2>
+    }
+
+    @if (showDescription) {
+      <p class="avatar-description">{{description}}</p>
+    }
+  </div>
+
+  <app-avatar
+    size="medium"
+    content="image"
+    [showBadge]="true"
+    [image]="image"
+  ></app-avatar>
+
+</div>

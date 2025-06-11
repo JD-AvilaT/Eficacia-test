@@ -1,0 +1,32 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+.button {
+    display: inline-flex;
+    width: auto;
+    height: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    gap: spacings.$spacing-xs;
+    background-color: transparent;
+    color: colors.$primary-blue;
+
+    &.big {
+        font-size: typography.$text-subtitle-size;
+        font-weight: typography.$text-subtitle-weight;
+    }
+
+    &.small{
+        font-size: typography.$text-body-sm-size;
+        font-weight: typography.$text-body-sm-weight;
+    }
+
+    app-icon {
+        width: fit-content;
+        height: fit-content;
+        margin: 0;
+    }
+
+}

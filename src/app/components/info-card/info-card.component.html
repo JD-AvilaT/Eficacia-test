@@ -1,0 +1,35 @@
+<div class="info-card" [class.alternate]="isAlternateState">
+    <div class="card-content">
+
+      <div *ngIf="!isAlternateState" class="card-content2">
+
+        <div class="default-state">
+          <h2 class="title">{{ title }}</h2>
+          <p class="text">{{ text }}</p>
+        </div>
+        
+        <div class="button-container">
+          <app-button 
+            [children]="buttonLabel" 
+            [appearance]="'outline'" 
+            [state]="'active'"
+            [iconSrc]="'arrowRight'"
+            [iconRight]="true"
+            (onClick)="onButtonClick()">
+          </app-button>
+        </div>
+
+      </div>
+
+    
+        <div *ngIf="isAlternateState" class="alternate-state">
+          <div class="alternate-cont">
+            <h2 class="title">{{ title }}</h2>
+            <h3 class="subtitle">{{ subtitle }}</h3>
+            <p class="text2">{{ text }}</p>
+          </div>
+          <img *ngIf="imageUrl" [src]="imageUrl" alt="" class="card-image">
+        </div>
+
+    </div>
+  </div>

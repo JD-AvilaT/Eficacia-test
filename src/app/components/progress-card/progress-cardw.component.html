@@ -1,0 +1,28 @@
+<div class="progress-card-web">
+    <div class="pcw-info">
+        <h3 class="pcw-title">{{ titleText }}</h3>
+        <p class="pcw-description">{{ descriptionText }}</p>
+    </div>
+
+  <app-progress-bar
+    [value]="progressValue"
+    color="green"
+    [showPercent]="false"
+    class="pcw-bar"
+  ></app-progress-bar>
+
+  <div class="pcw-progress">
+    <span class="pcw-text-left">{{ progressText }}</span>
+    <span class="line">|</span>
+    <span class="pcw-text-right">{{ progressTime }}</span>
+  </div>
+
+  <app-button
+    label="{{ linkText }}"
+    styles="text"
+    state="active"
+    color="error"
+    size="small"
+    orientation="center"
+  ></app-button>
+</div>

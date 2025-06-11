@@ -1,0 +1,69 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: spacings.$spacing-xs;
+  width: 100%;
+}
+
+.input-label {
+  font-size: typography.$text-btn-size;
+  color: colors.$primary-blue;
+  font-weight: typography.$text-btn-weight;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: spacings.$spacing-sm spacings.$spacing-sm;
+  border-radius: spacings.$radius-xs;
+  font-size: typography.$text-body-size;
+  font-weight: typography.$text-body-weight;
+  border: 1px solid colors.$sh-gray;
+
+  &.enabled {
+    border-color: colors.$sh-gray;
+    color: colors.$primary-blue;
+  }
+
+
+  &.selected {
+    border-color: colors.$primary-blue;
+    color: colors.$primary-blue;
+  }
+
+  &.error {
+    border-color: colors.$sh-red;
+    color: colors.$sh-red;;
+  }
+
+}
+
+.input-icon {
+  position: absolute;
+  right: spacings.$spacing-sm;
+  color: colors.$primary-blue;
+  
+  + .input-field {
+    padding-left: spacings.$spacing-xl;
+  }
+}
+
+.required-indicator {
+  display: flex;
+  color: colors.$sh-red;
+}
+
+.error-message {
+  font-size: typography.$text-body-size;
+  color: colors.$sh-red;
+  margin-top: spacings.$spacing-xs;
+}

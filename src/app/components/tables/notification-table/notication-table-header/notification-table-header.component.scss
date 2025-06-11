@@ -1,0 +1,23 @@
+@use "../../../../../styles/colors" as colors;
+@use '../../../../../styles/spacings' as spacings;
+@use '../../../../../styles/typography' as typography;
+@use '../../../../../styles/radius' as radius;
+@use '../../../../../styles/shadow' as shadow;
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: spacings.$padding-md spacings.$padding-xxxl;
+    h3 {
+      margin: spacings.$spacing-none;
+      font-size: typography.$text-subtitle-size;
+      font-weight: typography.$text-subtitle-weight;
+      color: colors.$color-texts-body;
+    }
+  }
+  hr {
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+  

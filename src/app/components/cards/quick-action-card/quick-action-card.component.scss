@@ -1,0 +1,52 @@
+@use "../../../../styles/colors" as colors;
+@use '../../../../styles/spacings' as spacings;
+@use '../../../../styles/typography' as typography;
+@use '../../../../styles/radius' as radius;
+@use '../../../../styles/shadow' as shadow;
+
+.quick-card {
+    width: 140px;
+    height: 140px;
+    padding: spacings.$padding-sm;
+    padding-top: spacings.$padding-lg;
+    border-radius: radius.$radiues-sm;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    &.content {
+      background: #ffffff;
+      border: 1px solid #ffffff;
+      box-shadow: shadow.$drop-shadow;
+    }
+  
+    &.void {
+      background: #f5f8fb;
+      border: 2px dashed colors.$color-texts-captions;
+    }
+  
+    .icon-top-right {
+      position: absolute;
+      top: spacings.$spacing-sm;
+      right: spacings.$spacing-sm;
+      cursor: pointer;
+      color: colors.$primary-blue;
+    }
+  
+    .icon-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .caption {
+      text-align: center;
+      font-size: typography.$text-caption-size;
+      font-weight: typography.$text-caption-weight;
+      color: colors.$color-texts-body;
+      max-width: 100px;
+    }
+  }
+  

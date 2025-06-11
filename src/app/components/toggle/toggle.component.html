@@ -1,0 +1,13 @@
+<div class="custom-toggle-wrapper" (click)="toggleChanged()">
+    <div class="custom-toggle" [class.checked]="checked">
+      <div class="toggle-handle"></div>
+    </div>
+  </div>
+  
+  <!-- Ocultamos el IonToggle pero sigue funcionando -->
+  <ion-toggle 
+    class="hidden-toggle"
+    [checked]="checked"
+    (ionChange)="toggleChanged($event)">
+  </ion-toggle>
+  

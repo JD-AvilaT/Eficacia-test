@@ -1,0 +1,65 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+.uploader-container {
+  display: flex;
+  max-width: 362px;
+  width: 100%;
+}
+
+.overlay {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: spacings.$spacing-sm;
+}
+
+.link-input-container {
+  width: 100%;
+  display: flex;
+  border: 1px solid colors.$blue-scale-300;
+  border-radius: 4px;
+  align-items: center;
+  padding: 8px;
+  color: colors.$color-text-titles;
+}
+
+.link-input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: typography.$text-body-size;
+  color: colors.$blue-scale-500;
+
+  &::placeholder {
+    color: colors.$blue-scale-300;
+  }
+}
+
+.link-info {
+  flex-grow: 1;
+  word-break: break-all;
+  font-size: typography.$text-body-size;
+  color: colors.$blue-scale-500;
+}
+
+p {
+  margin: 0;
+  font-size: typography.$text-subtitle-size;
+  color: colors.$color-text-titles;
+  font-weight: typography.$text-subtitle-weight;
+}
+
+.icon-button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: spacings.$spacing-sm;
+  color: colors.$color-text-titles;
+}
+
+.content{
+  display: flex;
+}

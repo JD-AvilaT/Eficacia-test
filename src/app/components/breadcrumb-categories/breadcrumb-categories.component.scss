@@ -1,0 +1,26 @@
+@use '../../../styles/colors' as colors;
+@use '../../../styles/typography' as typography;
+@use '../../../styles/spacings' as spacings;
+
+.breadcrumb-categories {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: typography.$text-body-sm-size;
+  gap: 0.25rem;
+}
+
+.breadcrumb-item {
+  color: colors.$ns-gray; 
+  white-space: nowrap;
+
+  &.last {
+    color: colors.$primary-blue; 
+    font-weight: typography.$text-body-sm-weight;
+  }
+}
+
+.breadcrumb-separator {
+  margin: 0 0.25rem;
+  color: colors.$ns-gray-subtitle;
+}

@@ -1,0 +1,41 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/typography' as typography;
+
+.menu-item {
+  max-width: 200px;
+  display: flex;
+  cursor: pointer;
+  gap: 6px;
+  align-items: center;
+
+  &.active {
+    
+    .icon {
+      color: #fff;
+    }
+    
+    .text {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+  }
+
+  .text {
+    flex: 1;
+    color: #333;
+    font-size: typography.$text-subtitle-size;
+    font-weight: typography.$text-subtitle-weight;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

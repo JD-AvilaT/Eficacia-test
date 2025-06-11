@@ -1,0 +1,12 @@
+<div class="table-wrapper">
+  <storybook-notification-table-header></storybook-notification-table-header>
+
+  <div class="table-body">
+    <storybook-notification-table-row
+      *ngFor="let n of notifications"
+      [title]="n.title"
+      [description]="n.description"
+      [time]="n.time"
+    ></storybook-notification-table-row>
+  </div>
+</div>

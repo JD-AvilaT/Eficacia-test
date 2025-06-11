@@ -1,0 +1,68 @@
+@use "../../../styles/colors" as colors;
+@use "../../../styles/spacings" as spacings;
+@use "../../../styles/typography" as typography;
+
+.progress-container {
+  width: 100%;
+  display: flex;
+  height: 7px;
+  flex-direction: column;
+}
+
+.progress-track {
+    width: 100%;
+    height: 8px;
+    background-color: colors.$color-texts-captions;
+    border-radius: 999px;
+    position: relative;
+    overflow: visible; 
+  }
+
+.progress-fill {
+  height: 100%;
+  border-radius: 999px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease-in-out;
+
+  &.green {
+    background-color: colors.$sh-green;
+  }
+
+  &.yellow {
+    background-color: colors.$ps-yellow;
+  }
+
+  &.red {
+    background-color: colors.$sh-red;
+  }
+}
+
+.progress-badge {
+    position: absolute;
+    height: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 3px 12px;
+    font-size: typography.$text-body-sm-size;
+    font-weight: typography.$text-body-sm-weight;
+    border-radius: 999px;
+    color: colors.$sh-white;
+    z-index: 2; 
+
+  &.green {
+    background-color: colors.$sh-green;
+    left: calc(65% - 16px); 
+  }
+
+  &.yellow {
+    background-color: colors.$ps-yellow;
+    left: calc(65% - 16px);
+  }
+
+  &.red {
+    background-color: colors.$sh-red;
+    left: calc(65% - 16px);
+  }
+}

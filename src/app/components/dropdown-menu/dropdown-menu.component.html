@@ -1,0 +1,27 @@
+<div class="dropdown-container">
+  <label class="dropdown-label">{{ textField }}</label>
+
+  <div class="dropdown-wrapper" [class.open]="isOpen">
+    <div class="dropdown-header" (click)="toggleDropdown()">
+      <span class="dropdown-placeholder" [class.selected]="selectedOption">
+        {{ selectedOption || textField }}
+      </span>
+      <app-icon
+        name="arrowDrop"
+        fill="#0041A3"
+        class="dropdown-icon"
+        [class.open]="isOpen"
+      />
+    </div>
+
+    <ul class="dropdown-list" *ngIf="isOpen">
+      <li
+        class="dropdown-item"
+        *ngFor="let option of options"
+        (click)="selectOption(option)"
+      >
+        {{ option }}
+      </li>
+    </ul>
+  </div>
+</div>

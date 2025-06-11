@@ -1,0 +1,53 @@
+<div class="all-container" [class.collapsed]="isCollapsed">
+  <div class="cont1">
+    <img *ngIf="!isCollapsed" src="../../../assets/images/eficaciaSAAS.png" alt="logo eficacia" />
+    <app-icon [name]="isCollapsed ? 'display' : 'arrowLeft'" fill="white" size="20px" (click)="toggleCollapse()"></app-icon>
+  </div>
+    
+  <hr style="border: 1px solid #ccc; margin: 0; width: 100%;">
+    
+  <div class="cont2" >
+    <app-search-menu *ngIf="!isCollapsed"></app-search-menu>
+    <div class="conticonsearch">
+      <app-icon [name]="'search'" fill="white"></app-icon>
+    </div>
+  </div>
+
+  <hr style="border: 1px solid #ccc; margin: 0; width: 100%;">
+
+  <div class="cont3">
+    <ng-container *ngFor="let item of section1Items">
+      <app-menu-item [text]="!isCollapsed ? item.text : ''" [icon]="item.icon" [isActive]="item.isActive"></app-menu-item>
+    </ng-container>
+  </div>
+
+  <hr style="border: 1px solid #ccc; margin: 0; width: 100%;">
+
+  <div class="cont4">
+    <h2 *ngIf="!isCollapsed">Accesos rápidos</h2>
+    <ng-container *ngFor="let item of section2Items">
+      <app-menu-item [text]="!isCollapsed ? item.text : ''" [icon]="item.icon" [isActive]="item.isActive" [route]="item.route"></app-menu-item>
+    </ng-container>
+  </div>
+
+  <hr style="border: 1px solid #ccc; margin: 0; width: 100%;">
+
+  <div class="cont5">
+    <h2 *ngIf="!isCollapsed">Súper administrador</h2>
+    <ng-container *ngFor="let item of section3Items">
+      <app-menu-item [text]="!isCollapsed ? item.text : ''" [icon]="item.icon" [isActive]="item.isActive"></app-menu-item>
+    </ng-container>
+  </div>
+
+  <hr style="border: 1px solid #ccc; margin: 0; width: 100%;">
+
+  <div class="cont6">
+    <!-- Contenido adicional si es necesario -->
+  </div>
+
+  <hr style="border: 1px solid #ccc; margin: 0; width: 100%;">
+
+  <div class="cont7">
+    <app-menu-item [text]="isCollapsed ? '' : 'Cerrar sesion'" icon="logout"></app-menu-item>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+<button 
+  [class]="getStyles(state)"
+  (click)="onClick.emit($event)">
+
+  <div class="content">
+    <span class="icon-left">
+      <app-icon [name]="currentIconSrc"></app-icon>
+    </span>
+
+    {{ children }}
+  </div>
+  
+  <span class="icon-right">
+    <app-icon 
+      [name]="'arrowRight'" 
+      [fill]="state == 'completed' ? '#FFFFFF' : '#0041A3'">
+    </app-icon>
+  </span>
+  
+
+</button>

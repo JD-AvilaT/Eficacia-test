@@ -1,0 +1,32 @@
+@use "../../../../../styles/colors" as colors;
+@use '../../../../../styles/spacings' as spacings;
+@use '../../../../../styles/typography' as typography;
+
+.header {
+  display: flex;
+  width: 100%;
+  gap: spacings.$spacing-md;
+  align-items: center;
+  padding-right: spacings.$padding-lg;
+
+  th {
+    flex: 1;                  
+    min-width: 0;
+    text-align: left;
+    color: colors.$primary-blue;
+    font-size: typography.$text-subtitle-size;
+    font-weight: typography.$text-subtitle-weight;
+    padding-left: spacings.$padding-sm;
+    
+    &.icon-cell {
+      flex: 0 0 auto;          
+      max-width: 24px;
+      padding: 0;
+    }
+
+    &.title-cell{
+        padding: 0;
+    }
+  }
+}
+  

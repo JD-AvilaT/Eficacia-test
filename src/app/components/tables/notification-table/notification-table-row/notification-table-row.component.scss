@@ -1,0 +1,45 @@
+@use "../../../../../styles/colors" as colors;
+@use '../../../../../styles/spacings' as spacings;
+@use '../../../../../styles/typography' as typography;
+@use '../../../../../styles/radius' as radius;
+@use '../../../../../styles/shadow' as shadow;
+
+.notification-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: spacings.$padding-lg spacings.$padding-xxxl;
+    gap: spacings.$spacing-lg;
+    background: #f9fafb;
+    border-bottom: 1px solid #e0e0e0;
+  
+    .icon {
+      width: 24px;
+      margin-right: spacings.$spacing-sm;
+    }
+  
+    .text {
+      flex-grow: 1;
+      strong {
+        display: block;
+        color: colors.$primary-blue;
+        font-size: typography.$text-body-size;
+        font-weight: typography.$text-body-weight;
+      }
+      p {
+        margin: 4px 0 0;
+        color: colors.$color-texts-body;
+        font-size: typography.$text-overline-size;
+        font-weight: typography.$text-overline-weight;
+      }
+    }
+  
+    .time {
+      font-size: typography.$text-caption-size;
+      font-weight: typography.$text-caption-weight;
+      color: colors.$primary-blue;
+      margin-left: spacings.$padding-md;
+      white-space: nowrap;
+    }
+  }
+  

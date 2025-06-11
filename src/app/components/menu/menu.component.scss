@@ -1,0 +1,147 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+.all-container {
+    display: flex;
+    flex-direction: column;
+    width: 252px;
+    height: 100vh;
+    background-color: colors.$blue-scale-500;
+    color: colors.$sh-white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: width 0.3s ease;
+
+    &.collapsed {
+        width: 92px;
+
+        .cont1 {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cont2 {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cont3 {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cont4 {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cont5 {
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cont7 {
+            justify-content: center;
+            align-items: center;
+        }
+
+        app-menu-item {
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    h2 {
+        font-size: typography.$text-subtitle-size;
+        font-weight: typography.$text-subtitle-weight;
+    }
+}
+
+.cont1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: spacings.$padding-md;
+    cursor: pointer;
+
+    img {
+        transition: opacity 0.3s ease;
+    }
+}
+
+.cont2{
+    display: flex;
+    gap: spacings.$padding-xs;
+    align-items: center;
+    justify-content: center;
+    padding: spacings.$padding-md;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+.cont3{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: start;
+    padding: spacings.$spacing-lg;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cont4{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: start;
+    padding: spacings.$spacing-lg;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cont5{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: start;
+    padding: spacings.$spacing-lg;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cont6{
+    display: flex;
+    height:100%;
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: start;
+    padding: spacings.$spacing-lg;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.cont7{
+    display: flex;
+    justify-content: start;
+    gap: 5px;
+    align-items: center;
+    padding: spacings.$spacing-lg;
+}
+
+.conticonsearch{
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    height: 32px;
+    width: 38px;
+}

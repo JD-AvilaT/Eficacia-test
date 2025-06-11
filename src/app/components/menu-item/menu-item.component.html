@@ -1,0 +1,6 @@
+<div class="menu-item" [class.active]="isActive" (click)="handleClick($event)">
+  <div class="icon">
+    <app-icon [name]="icon" fill="currentColor"></app-icon>
+  </div>
+  <div class="text">{{ text }}</div>
+</div>

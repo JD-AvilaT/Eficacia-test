@@ -1,0 +1,40 @@
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 12px;
+    height: 66px;
+    padding: 0 16px;
+    width: 317px;
+    gap: 16px;
+  }
+  
+  .left-section {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  
+    .icon {
+      width: 28px;
+      height: 28px;
+      color: #0041A3;
+    }
+  }
+  
+  .divider {
+    width: 1px;
+    height: 36px;
+    background-color: #c0c0c0;
+  }
+  
+  .right-section {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  
+    .name {
+      font-weight: 600;
+      color: #003087;
+    }
+  }
+  

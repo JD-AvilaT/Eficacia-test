@@ -1,0 +1,58 @@
+@use "../../../styles/colors" as colors;
+@use "../../../styles/spacings" as spacings;
+@use "../../../styles/typography" as typography;
+
+.progress-card-web {
+  background: colors.$sh-white;
+  border-radius: spacings.$radius-md;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: spacings.$spacing-lg spacings.$spacing-md;
+  max-width: 631px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: spacings.$spacing-md;
+
+    .pcw-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+  .pcw-title {
+    margin: 0;
+    font-size: typography.$text-h3-size;
+    font-weight: typography.$text-h3-weight;
+    color: colors.$color-text-titles;
+  }
+
+  .pcw-description {
+    margin: 0;
+    font-size: typography.$text-body-size;
+    font-weight: typography.$text-body-weight;
+    color: colors.$color-texts-body;
+  }
+
+  .pcw-bar {
+    width: 100%;
+    margin-top: spacings.$spacing-sm;
+  }
+
+  .pcw-progress {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: spacings.$spacing-xs;
+  }
+
+  .pcw-text-left,
+  .pcw-text-right,
+  .line {
+    white-space: nowrap;
+    font-size: typography.$text-caption-size;
+    font-weight: typography.$text-caption-weight;
+    color: colors.$color-texts-captions;
+  }
+
+  app-button {
+    align-self: center;
+  }
+}

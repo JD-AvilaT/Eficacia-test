@@ -1,0 +1,10 @@
+<button class="status-button" (click)="handleClick()">
+    <svg viewBox="0 0 24 24" class="icon" *ngIf="status === 'add'">
+      <path d="M12 5v14M5 12h14" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" />
+    </svg>
+  
+    <svg viewBox="0 0 24 24" class="icon" *ngIf="status === 'remove'">
+      <path d="M5 12h14" stroke="white" stroke-width="2" fill="none" stroke-linecap="round" />
+    </svg>
+  </button>
+  

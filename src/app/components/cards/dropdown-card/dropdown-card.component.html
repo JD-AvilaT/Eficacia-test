@@ -1,0 +1,29 @@
+<div [class]="['dropdown-container', style]" [style.width]="width">
+    <div class="dropdown-header" (click)="toggleDropdown()">
+      <div class="header">
+  
+        <div class="title-content">
+          <app-icon
+            [name]="iconStart"
+            [fill]="style === 'secondary' ? '#FFFFFF' : '#0041A3'"
+            size="24"
+          />
+          <h2 class="section-title">{{title}}</h2>
+        </div>
+        <span class="section-subtitle">{{caption}}</span>
+      </div>
+  
+       @if (showIconEnd) {
+        <app-icon
+          [name]="isOpen ? 'arrowLeft' : 'arrowRight'"
+          [fill]="style === 'secondary' ? '#FFFFFF' : '#0041A3'"
+          size="24"
+        />
+      }
+      
+    </div>
+  
+    @if (isOpen) {
+        <p class="section-body">{{description}}</p>
+    }
+  </div>

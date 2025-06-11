@@ -1,0 +1,40 @@
+.radio-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .native-radio {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .custom-radio {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #737373;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.2s ease;
+  }
+  
+  .custom-radio.selected {
+    border-color: #0040c1;
+  }
+  
+  .custom-radio.selected::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: #0040c1;
+  }
+  

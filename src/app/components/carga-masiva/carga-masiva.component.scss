@@ -1,0 +1,37 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+.contents {
+    display: flex;
+    padding: spacings.$padding-xs;
+    min-width: 140px;
+    flex-direction: column;
+    background-color: colors.$sh-white;
+    border-radius: spacings.$radius-sm;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+  height: 28px;
+  padding: spacings.$padding-xs;
+  border-radius: spacings.$radius-sm;
+  background-color: colors.$sh-white;
+  color: #000;
+  font-size: typography.$text-subtitle-size;
+  font-weight: typography.$text-body-weight;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  position: relative;
+  align-items: center;
+  text-align: left; /* Añade esta línea para alinear el texto a la izquierda */
+  display: flex; /* Opcional: si necesitas más control */
+  gap: spacings.$spacing-sm;
+  
+  &:hover{
+    background-color: darken(colors.$sh-white, 5%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1px);
+  }
+}

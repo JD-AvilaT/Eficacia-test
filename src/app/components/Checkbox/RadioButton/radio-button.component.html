@@ -1,0 +1,10 @@
+<label class="radio-wrapper">
+    <input
+      type="radio"
+      class="native-radio"
+      [checked]="selected"
+      (change)="onChange()"
+    />
+    <span class="custom-radio" [class.selected]="selected"></span>
+  </label>
+  

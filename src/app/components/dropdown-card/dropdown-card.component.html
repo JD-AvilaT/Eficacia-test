@@ -1,0 +1,35 @@
+<div class="dropdown-container">
+  <div class="dropdown-header" (click)="toggleDropdown()">
+    <app-icon
+      name="alertInfo"
+      size="24"
+    />
+    <div class="headers">
+      <h2 class="section-title header-text">{{header}}</h2>
+      <span class="section-subtitle">{{caption}}</span>
+    </div>
+    <app-icon
+      [name]="isOpen ? 'arrowLeft' : 'arrowRight'"
+      fill="#0041A3"
+      size="24"
+    />
+  </div>
+
+  
+  
+  @if (isOpen) {
+      <hr class="divider-line">
+
+      <div class="state-info">
+        <h4 class="section-title">Estado</h4>
+        <p class="section-state">{{stateText}}</p>
+      </div>
+      
+        <div class="header-info">
+          <h4 class="section-title">{{title}}</h4>
+          <p class="section-subtitle">{{subtitle}}</p>
+        </div>
+
+        <p class="section-body">{{body}}</p>
+  }
+</div>

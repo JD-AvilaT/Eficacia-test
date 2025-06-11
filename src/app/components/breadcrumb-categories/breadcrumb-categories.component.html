@@ -1,0 +1,14 @@
+<nav class="breadcrumb-categories">
+  <ng-container *ngFor="let item of items; let i = index">
+    <span
+      class="breadcrumb-item"
+      [class.last]="i === items.length - 1"
+      >{{ item }}</span
+    >
+    <span
+      *ngIf="i < items.length - 1"
+      class="breadcrumb-separator"
+      >/</span
+    >
+  </ng-container>
+</nav>

@@ -1,0 +1,35 @@
+@use "../../../styles/colors" as colors;
+@use '../../../styles/spacings' as spacings;
+@use '../../../styles/typography' as typography;
+
+
+.content{
+    display: flex;
+    flex-direction: row;
+    width: 278px;
+    gap: 8px;
+    align-items: start;
+    justify-content: start;
+    height: fit-content;
+}
+
+.icon{
+    display: flex;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.text {
+    display: flex;
+    justify-content: start;
+    margin-top: 0;
+    padding-top: 4px;
+    font-size: typography.$text-body-size;
+    font-weight: typography.$text-body-weight;
+    flex-wrap: wrap; /* Permite saltos de línea */
+    overflow-wrap: break-word; /* Rompe palabras largas */
+    word-break: break-word; /* Alternativa para mejor compatibilidad */
+    color: colors.$sh-gray;
+}
+

@@ -1,0 +1,29 @@
+@use "../../../../../styles/colors" as colors;
+@use '../../../../../styles/spacings' as spacings;
+@use '../../../../../styles/typography' as typography;
+
+.row {
+  display: flex;
+  width: 100%;
+  gap: spacings.$spacing-md;
+  align-items: center;
+  background-color: colors.$sh-white;
+  padding: spacings.$padding-lg spacings.$padding-lg;
+  border-bottom: 1px solid colors.$sh-gray;
+
+  td {
+    flex: 1;                  
+    min-width: 0;
+    text-align: left;
+    color: colors.$ns-gray;
+    font-size: typography.$text-body-size;
+    font-weight: typography.$text-body-weight;
+    
+
+    &.icon-cell {
+      flex: 0 0 auto;          
+      max-width: 24px;
+    }
+  }
+}
+  

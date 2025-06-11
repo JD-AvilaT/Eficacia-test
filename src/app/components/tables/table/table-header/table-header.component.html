@@ -1,0 +1,17 @@
+<thead class="header">
+    <th class="title-cell">
+      <app-title-table [title]="title"></app-title-table>
+    </th>
+
+    <th *ngFor="let column of getColumns()">
+      {{ column | titlecase }} 
+    </th>
+
+    <th class="icon-cell">
+      <app-icon 
+        name="addCircle" 
+        size="24"
+        fill="#0041A3"
+      />
+    </th>
+</thead>

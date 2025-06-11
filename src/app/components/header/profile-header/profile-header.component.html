@@ -1,0 +1,14 @@
+<div class="profile-header">
+    <div class="left-section" *ngIf="showIcons">
+      <app-icon name="search" class="icon"></app-icon>
+      <app-icon name="notification"></app-icon>
+    </div>
+  
+    <div class="divider" *ngIf="showIcons && showProfile"></div>
+  
+    <div class="right-section" *ngIf="showProfile">
+      <span class="name">Amanda Miguel</span>
+      <app-avatar size="medium"></app-avatar>
+    </div>
+  </div>
+  
