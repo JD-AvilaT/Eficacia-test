@@ -1,0 +1,26 @@
+<!-- baseCard.component.html -->
+<div class="base-card">
+  <!-- Header Momentos -->
+  <app-header-momentos
+    [title]="title"
+    [subtitle]="subtitle"
+    [description]="description">
+  </app-header-momentos>
+
+  <!-- Zona de contenido (aquí tu input) -->
+  <div class="base-card__content">
+    <app-input
+      [label]="inputLabel"
+      [placeholder]="placeholder"
+      [type]="type"
+      [state]="state"
+      [showIcon]="showIcon"
+      [showRequired]="showRequired"
+      [ShowAlert]="ShowAlert"
+      [alertText]="alertText"
+      [errorText]="errorText"
+      [value]="value"
+      (valueChange)="handleValueChange($event)"
+    ></app-input>
+  </div>
+</div>
